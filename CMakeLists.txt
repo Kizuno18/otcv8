@@ -98,8 +98,7 @@ add_definitions(-DWITH_ENCRYPTION)
 # *****************************************************************************
 # Add definition for NDEBUG
 # *****************************************************************************
-add_compile_definitions(NDEBUG)
-add_compile_definitions(-NDEBUG)
+add_compile_definitions(-DNDEBUG)
 
 # *****************************************************************************
 # Add project
