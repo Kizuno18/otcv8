@@ -1,6 +1,3 @@
--- Cavebot by otclient@otclient.ovh
--- visit http://bot.otclient.ovh/
-
 local cavebotTab = "Cave"
 local targetingTab = "Target"
 

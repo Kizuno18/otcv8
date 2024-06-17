@@ -1,8 +1,8 @@
 Module
   name: crash_reporter
   description: Sends crash log to remote server
-  author: otclient@otclient.ovh
-  website: otclient.ovh
+  author: opentibiabr@outlook.com
+  website: docs.opentibiabr.com
   reloadable: false
   scripts: [ crash_reporter ]
   @onLoad: init()

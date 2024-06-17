@@ -2,7 +2,7 @@ Module
   name: client_feedback
   description: Allow to send feedback
   author: otclientv8
-  website: otclient.ovh
+  website: docs.opentibiabr.com
   sandboxed: true
   dependencies: [ game_interface ]
   scripts: [ feedback ]

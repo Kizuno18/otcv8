@@ -155,13 +155,13 @@ function onLogout()
 end
 
 function scheduleAutoReconnect()
-  if lastLogout + 1 > g_clock.millis() then
+  if lastLogout + 2000 > g_clock.millis() then
     return
   end
   if autoReconnectEvent then
     removeEvent(autoReconnectEvent)    
   end
-  autoReconnectEvent = scheduleEvent(executeAutoReconnect, 1)
+  autoReconnectEvent = scheduleEvent(executeAutoReconnect, 2500)
 end
 
 function executeAutoReconnect()  

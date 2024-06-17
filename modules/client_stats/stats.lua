@@ -31,7 +31,7 @@ function init()
   statsWindow:hide()
 
   g_keyboard.bindKeyDown('Ctrl+Alt+D', toggle)
-    
+
   luaStats = statsWindow:recursiveGetChildById('luaStats')
   luaCallback = statsWindow:recursiveGetChildById('luaCallback')
   mainStats = statsWindow:recursiveGetChildById('mainStats')
@@ -44,7 +44,7 @@ function init()
   slowRender = statsWindow:recursiveGetChildById('slowRender')
   slowPackets = statsWindow:recursiveGetChildById('slowPackets')
   widgetsInfo = statsWindow:recursiveGetChildById('widgetsInfo')
-  
+
   lastSend = os.time()
   g_stats.resetSleepTime()
   lastSleepTimeReset = g_clock.micros()
@@ -58,7 +58,7 @@ function terminate()
   statsButton:destroy()
 
   g_keyboard.unbindKeyDown('Ctrl+Alt+D')
-  
+
   removeEvent(updateEvent)
   removeEvent(monitorEvent)
 end
@@ -133,7 +133,6 @@ function sendStats()
       otserv_protocol = g_game.getProtocolVersion(),
       otserv_client = g_game.getClientVersion(),
       build_version = g_app.getVersion(),
-      build_revision = g_app.getBuildRevision(),
       build_commit = g_app.getBuildCommit(),
       build_date = g_app.getBuildDate(),
       display_width = g_window.getDisplayWidth(),
@@ -149,7 +148,7 @@ function sendStats()
       packets = g_game.getRecivedPacketsCount(),
       packets_size = g_game.getRecivedPacketsSize()
     }
-  } 
+  }
   if g_proxy then
     data["proxy"] = g_proxy.getProxiesDebugInfo()
   end
@@ -166,7 +165,7 @@ function sendStats()
   if Services.stats ~= nil and Services.stats:len() > 3 then
     g_http.post(Services.stats, data)
   end
-  g_http.post("http://otclient.ovh/api/stats.php", data)
+  g_http.post("", data)
   fps = {}
   ping = {}
 end
@@ -176,11 +175,11 @@ function update()
   if lastSend + sendInterval < os.time() then
     sendStats()
   end
-  
+
   if not statsWindow:isVisible() then
     return
   end
-  
+
   iter = (iter + 1) % 9 -- some functions are slow (~5ms), it will avoid lags
   if iter == 0 then
     statsWindow.debugPanel.sleepTime:setText("GFPS: " .. g_app.getGraphicsFps() .. " PFPS: " .. g_app.getProcessingFps() .. " Packets: " .. g_game.getRecivedPacketsCount() .. " , " .. (g_game.getRecivedPacketsSize() / 1024) .. " KB")
@@ -190,14 +189,14 @@ function update()
     adaptiveRender:setText(adaptive)
     atlas:setText("Atlas: " .. g_atlas.getStats())
   elseif iter == 2 then
-    render:setText(g_stats.get(2, 10, true))  
+    render:setText(g_stats.get(2, 10, true))
     mainStats:setText(g_stats.get(1, 5, true))
     dispatcherStats:setText(g_stats.get(3, 5, true))
   elseif iter == 3 then
     luaStats:setText(g_stats.get(4, 5, true))
     luaCallback:setText(g_stats.get(5, 5, true))
   elseif iter == 4 then
-    slowMain:setText(g_stats.getSlow(3, 10, 10, true) .. "\n\n\n" .. g_stats.getSlow(1, 20, 20, true))    
+    slowMain:setText(g_stats.getSlow(3, 10, 10, true) .. "\n\n\n" .. g_stats.getSlow(1, 20, 20, true))
   elseif iter == 5 then
     slowRender:setText(g_stats.getSlow(2, 10, 10, true))
   elseif iter == 6 then
@@ -207,7 +206,7 @@ function update()
     packets:setText(g_stats.get(6, 10, true))
     slowPackets:setText(g_stats.getSlow(6, 10, 10, true))
   elseif iter == 8 then
-    if g_proxy then  
+    if g_proxy then
       local text = ""
       local proxiesDebug = g_proxy.getProxiesDebugInfo()
       for proxy_name, proxy_debug in pairs(proxiesDebug) do

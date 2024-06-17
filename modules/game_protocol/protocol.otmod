@@ -2,7 +2,7 @@ Module
   name: game_protocol
   description: Game protocol
   author: otclientv8
-  website: http://otclient.ovh
+  website: http://yourwebsite
   scripts: [ protocol ]
   sandboxed: true
   autoload: true

@@ -1,5 +1,5 @@
--- Cavebot by otclient@otclient.ovh
--- visit http://bot.otclient.ovh/
+-- Cavebot by opentibiabr@outlook.com
+-- visit http://docs.opentibiabr.com/
 
 local cavebotTab = "Cave"
 local targetingTab = storage.extras.joinBot and "Cave" or "Target"

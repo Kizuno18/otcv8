@@ -1,7 +1,7 @@
 Module
   name: game_buttons
   description: Shows miniwindow with buttons
-  author: otclient@otclient.ovh
+  author: opentibiabr@outlook.com
   sandboxed: true
   scripts: [ buttons ]
   @onLoad: init()

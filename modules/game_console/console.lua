@@ -1475,10 +1475,10 @@ function online()
     tab.npcChat = true
   end
   
---if g_game.getClientVersion() < 862 then
---  local gameRootPanel = modules.game_interface.getRootPanel()
---  g_keyboard.bindKeyDown('Ctrl+R', openPlayerReportRuleViolationWindow, gameRootPanel)
---end
+  if g_game.getClientVersion() < 862 then
+    local gameRootPanel = modules.game_interface.getRootPanel()
+    g_keyboard.bindKeyDown('Ctrl+R', openPlayerReportRuleViolationWindow, gameRootPanel)
+  end
   -- open last channels
   local lastChannelsOpen = g_settings.getNode('lastChannelsOpen')
   if lastChannelsOpen then

@@ -1,8 +1,8 @@
 Module
   name: game_battle
   description: Manage battle window (new)
-  author: otclient@otclient.ovh
-  website: otclient.ovh
+  author: opentibiabr@outlook.com
+  website: docs.opentibiabr.com
   sandboxed: true
   scripts: [ battle ]
   @onLoad: init()

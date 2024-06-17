@@ -1,8 +1,8 @@
 Module
   name: game_walking
   description: Control walking and turns
-  author: otclient.ovh
-  website: http://otclient.ovh
+  author: otclientv8
+  website: http://yourwebsite
   scripts: [ walking ]
   dependencies: [ game_interface ]
   @onLoad: init()
