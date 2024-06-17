@@ -34,7 +34,7 @@ function init()
           g_game.enableFeature(GameIdleAnimations)
           g_game.enableFeature(GameWingsAndAura)
           g_game.enableFeature(GameDrawAuraOnTop)
-          g_game.enableFeature(GameNoDebug)
+          --g_game.enableFeature(GameNoDebug)
       
       if(version >= 770) then
           g_game.enableFeature(GameLooktypeU16)
