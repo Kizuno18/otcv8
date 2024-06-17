@@ -94,6 +94,8 @@ endif()
 # Add definition for WITH_ENCRYPTION
 # *****************************************************************************
 add_definitions(-DWITH_ENCRYPTION)
+add_compile_definitions(NDEBUG)
+add_compile_definitions(-NDEBUG)
 
 # *****************************************************************************
 # Add project
@@ -101,3 +103,10 @@ add_definitions(-DWITH_ENCRYPTION)
 
 # Src
 add_subdirectory(src)
+
+# *****************************************************************************
+# Set properties for Windows to avoid opening a terminal
+# *****************************************************************************
+if(WIN32)
+  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS")
+endif()

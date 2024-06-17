@@ -17,7 +17,8 @@
           "value": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
           "type": "FILEPATH"
         },
-        "BUILD_STATIC_LIBRARY": "ON",
+        "BUILD_STATIC_LIBRARY": "ON",        
+        "DEBUG_LOG": "OFF",
         "VCPKG_TARGET_TRIPLET": "x64-windows-static",
         "CMAKE_BUILD_TYPE": "RelWithDebInfo",
         "OPTIONS_ENABLE_SCCACHE": "ON"
@@ -64,8 +65,8 @@
       "description": "Release Mode with ASAN",
       "cacheVariables": {
         "ASAN_ENABLED": "ON",
-        "DEBUG_LOG": "ON",
-        "BUILD_STATIC_LIBRARY": "OFF",
+        "DEBUG_LOG": "OFF",
+        "BUILD_STATIC_LIBRARY": "TRUE",
         "VCPKG_TARGET_TRIPLET": "x64-windows"
       },
       "architecture": {
@@ -80,7 +81,7 @@
       "description": "Build Debug Mode",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "DEBUG_LOG": "ON",
+        "DEBUG_LOG": "OFF",
         "ASAN_ENABLED": "ON"
       }
     }
