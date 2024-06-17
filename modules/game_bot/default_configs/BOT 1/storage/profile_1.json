@@ -1,0 +1,257 @@
+{
+  "hpitem1": {
+    "max": 90,
+    "title": "HP%",
+    "min": 51,
+    "item": 266,
+    "on": false,
+    "subType": 0
+  },
+  "staminaItemsUser": {
+    "max": 40,
+    "items": [
+      11588,
+      0,
+      0,
+      0,
+      0
+    ],
+    "min": 25
+  },
+  "manaTrain": {
+    "max": 100,
+    "title": "MP%",
+    "on": false,
+    "min": 80,
+    "text": "utevo lux"
+  },
+  "autoEquip": [
+    {
+      "item1": 3052,
+      "title": "Auto Equip",
+      "item2": 3089,
+      "on": false,
+      "slot": 9
+    },
+    {
+      "item1": 0,
+      "title": "Auto Equip",
+      "item2": 0,
+      "on": false,
+      "slot": 0
+    },
+    {
+      "item1": 0,
+      "title": "Auto Equip",
+      "item2": 0,
+      "on": false,
+      "slot": 0
+    },
+    {
+      "item1": 0,
+      "title": "Auto Equip",
+      "item2": 0,
+      "on": false,
+      "slot": 0
+    }
+  ],
+  "healing2": {
+    "max": 99,
+    "title": "HP%",
+    "on": false,
+    "min": 0,
+    "text": "exura vita"
+  },
+  "ssa": {
+    "max": 90,
+    "min": 60,
+    "bpId": 2854
+  },
+  "comboScriptPanel": {
+    "time": 31,
+    "items": [
+      11455,
+      10316,
+      10306,
+      10293,
+      9650,
+      11454,
+      3726,
+      9642,
+      3215,
+      13202,
+      13203,
+      13204,
+      9641,
+      13435,
+      13436,
+      13437,
+      13273,
+      13274,
+      13275,
+      13513,
+      13220,
+      13507,
+      13508,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "hasteSpell": "utani hur",
+  "_macros": {
+    "": false,
+    "Anti Kick": true,
+    "Catar no chao": false
+  },
+  "manaitem2": {
+    "max": 50,
+    "title": "MP%",
+    "min": 0,
+    "item": 3157,
+    "on": false,
+    "subType": 0
+  },
+  "conjureScript": {
+    "min": 5,
+    "text": "adori dodge"
+  },
+  "containerpickUp": [
+    {
+      "count": 1,
+      "id": 8860
+    }
+  ],
+  "healing1": {
+    "max": 99,
+    "title": "HP%",
+    "on": false,
+    "min": 0,
+    "text": "exura ico"
+  },
+  "pickUp": [
+    {
+      "id": 677,
+      "count": 1
+    },
+    {
+      "id": 678,
+      "count": 1
+    },
+    {
+      "id": 675,
+      "count": 1
+    },
+    {
+      "id": 3040,
+      "count": 1
+    },
+    {
+      "id": 3030,
+      "count": 1
+    },
+    {
+      "id": 3026,
+      "count": 1
+    },
+    {
+      "id": 676,
+      "count": 1
+    },
+    {
+      "id": 3028,
+      "count": 1
+    },
+    {
+      "id": 3029,
+      "count": 1
+    },
+    {
+      "id": 3033,
+      "count": 1
+    },
+    {
+      "id": 3032,
+      "count": 2
+    }
+  ],
+  "_configs": {
+    "cavebot_configs": {
+      "enabled": true,
+      "selected": "wga"
+    },
+    "targetbot_configs": {
+      "enabled": false,
+      "selected": "config_name"
+    }
+  },
+  "foodItems": [
+    {
+      "id": 3582,
+      "count": 1
+    },
+    {
+      "id": 3577,
+      "count": 1
+    }
+  ],
+  "antiParalyze": "utani hur",
+  "dropItems": [
+    {
+      "id": 283,
+      "count": 1
+    },
+    {
+      "id": 284,
+      "count": 1
+    },
+    {
+      "id": 285,
+      "count": 1
+    }
+  ],
+  "moneyItems": [
+    {
+      "count": 1,
+      "id": 3031
+    },
+    {
+      "count": 1,
+      "id": 3035
+    }
+  ],
+  "manaitem1": {
+    "max": 90,
+    "title": "MP%",
+    "min": 51,
+    "item": 268,
+    "on": false,
+    "subType": 0
+  },
+  "hpitem2": {
+    "max": 50,
+    "title": "HP%",
+    "min": 0,
+    "item": 3160,
+    "on": false,
+    "subType": 0
+  },
+  "manaShield": "utamo vita",
+  "autoTradeMessage": "(Mensagem automatica) Entrem no Discord do Demolidores la podemos lhe ajudar melhor! https://discord.gg/Fq5pEVgMMG",
+  "_icons": {
+    "Catar": {
+      "y": 0.05,
+      "x": 0.01,
+      "enabled": false
+    }
+  },
+  "ering": {
+    "max": 90,
+    "min": 60,
+    "bpId": 2854
+  }
+}

@@ -1,8 +1,8 @@
 Module
   name: game_shop
   description: Game shop
-  author: otclientv8
-  website: http://yourwebsite
+  author: otclient.ovh
+  website: http://otclient.ovh
   sandboxed: true
   scripts: [ shop ]
   dependencies: [ client_topmenu ]

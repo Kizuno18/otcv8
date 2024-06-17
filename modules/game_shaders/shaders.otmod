@@ -2,7 +2,7 @@ Module
   name: game_shaders
   description: Load shaders
   author: otclientv8
-  website: http://yourwebsite
+  website: http://otclient.ovh
   scripts: [ shaders ]
   sandboxed: true
   @onLoad: init()

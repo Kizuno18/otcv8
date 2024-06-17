@@ -7,10 +7,6 @@ OptionPanel
       visible: false
 
   OptionCheckBox
-    id: moveWindowsToPanel
-    !text: tr('Move windows to panel')
-    
-  OptionCheckBox
     id: autoChaseOverride
     !text: tr('Allow auto chase override')
 

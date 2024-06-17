@@ -2,28 +2,28 @@ local defaultOptions = {
   layout = DEFAULT_LAYOUT, -- set in init.lua
   vsync = true,
   showFps = true,
-  showPing = true,
+  showPing = false,
   fullscreen = false,
   classicView = not g_app.isMobile(),
-  cacheMap = g_app.isMobile(),
+  cacheMap = true,
   classicControl = not g_app.isMobile(),
-  smartWalk = false,
-  dash = false,
+  smartWalk = true,
+  dash = true,
   autoChaseOverride = true,
   showStatusMessagesInConsole = true,
   showEventMessagesInConsole = true,
   showInfoMessagesInConsole = true,
   showTimestampsInConsole = true,
   showLevelsInConsole = true,
-  showPrivateMessagesInConsole = true,
+  showPrivateMessagesInConsole = false,
   showPrivateMessagesOnScreen = true,
   rightPanels = 1,
   leftPanels = g_app.isMobile() and 1 or 2,
   containerPanel = 8,
   backgroundFrameRate = 60,
-  enableAudio = true,
+  enableAudio = false,
   enableMusicSound = false,
-  musicSoundVolume = 100,
+  musicSoundVolume = 0,
   botSoundVolume = 100,
   enableLights = false,
   floorFading = 500,
@@ -35,22 +35,22 @@ local defaultOptions = {
   displayMana = true,
   displayHealthOnTop = false,
   showHealthManaCircle = false,
-  hidePlayerBars = false,
+  hidePlayerBars = true,
   highlightThingsUnderCursor = true,
-  topHealtManaBar = true,
+  topHealtManaBar = false,
   displayText = true,
   dontStretchShrink = false,
-  turnDelay = 30,
-  hotkeyDelay = 30,
+  turnDelay = 0,
+  hotkeyDelay = 0,
     
   wsadWalking = false,
-  walkFirstStepDelay = 200,
-  walkTurnDelay = 100,
-  walkStairsDelay = 50,
-  walkTeleportDelay = 200,
-  walkCtrlTurnDelay = 150,
+  walkFirstStepDelay = 0,
+  walkTurnDelay = 0,
+  walkStairsDelay = 0,
+  walkTeleportDelay = 0,
+  walkCtrlTurnDelay = 0,
 
-  topBar = true,
+  topBar = false,
 
   actionbar1 = true,
   actionbar2 = false,
@@ -66,9 +66,7 @@ local defaultOptions = {
 
   profile = 1,
   
-  antialiasing = true,
-  floorShadow = true,
-  moveWindowsToPanel = false
+  antialiasing = true
 }
 
 local optionsWindow
@@ -352,14 +350,6 @@ function setOption(key, value, force)
     generalPanel:getChildById('walkCtrlTurnDelayLabel'):setText(tr('Walk delay after ctrl turn: %s ms', value))  
   elseif key == "antialiasing" then
     g_app.setSmooth(value)
-  elseif key == "floorShadow" then
-    if value then
-      g_game.enableFeature(GameDrawFloorShadow)
-    else
-      g_game.disableFeature(GameDrawFloorShadow)
-    end
-  elseif key == 'moveWindowsToPanel' then
-    g_settings.set('moveWindowsToPanel', true)
   end
 
   -- change value for keybind updates

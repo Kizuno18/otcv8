@@ -8,7 +8,6 @@ Module
   load-later:
     - game_buttons
     - game_hotkeys
-    - game_questlog
     - game_textmessage
     - game_console
     - game_outfit
@@ -32,7 +31,6 @@ Module
     - game_modaldialog
     - game_unjustifiedpoints
     - game_walking
-    - game_shop
     - game_itemselector
     - client_textedit
     - client_profiles

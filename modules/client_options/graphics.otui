@@ -2,12 +2,12 @@ OptionPanel
   Label
     text-wrap: false
     @onSetup: |
-      self:setText(tr("GPU: ") .. g_graphics.getRenderer())
+      self:setText(tr("GPU: ") .. g_graphics.getRenderer())      
 
   Label
     text-wrap: false
     @onSetup: |
-      self:setText(tr("Version: ") .. g_graphics.getVersion())
+      self:setText(tr("Version: ") .. g_graphics.getVersion())      
 
   HorizontalSeparator
     id: separator
@@ -35,15 +35,11 @@ OptionPanel
     id: antialiasing
     !text: tr('Antialiasing')
 
-  OptionCheckBox
-    id: floorShadow
-    !text: tr('Floor Shadow')
-
   Label
     margin-top: 12
     id: optimizationLevelLabel
     !text: tr("Optimization level")
-
+    
   ComboBox
     id: optimizationLevel
     margin-top: 3
@@ -57,7 +53,7 @@ OptionPanel
       self:addOption("Medium")
       self:addOption("High")
       self:addOption("Maximum")
-
+      
   Label
     !text: tr('High/Maximum optimization level may cause visual defects.')
     margin-top: 5
@@ -92,13 +88,13 @@ OptionPanel
     margin-top: 3
     minimum: 0
     maximum: 100
-
+  
   Label
     id: tips
     margin-top: 20
     text-auto-resize: true
     text-align: left
     text-wrap: true
-    !text: tr("If you have FPS issues:\n- Use OpenGL version (_gl)\n- Disable vertical synchronization\n- Set higher optimization level\n- Lower screen resolution\nOr report it on forum: http://docs.opentibiabr.com")
+    !text: tr("If you have FPS issues:\n- Use OpenGL version (_gl)\n- Disable vertical synchronization\n- Set higher optimization level\n- Lower screen resolution\nOr report it on forum: http://otclient.net")
     $mobile:
       visible: false
