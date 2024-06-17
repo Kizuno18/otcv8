@@ -52,11 +52,10 @@ if(OPTIONS_ENABLE_CCACHE)
 	if(CCACHE)
 		log_option_enabled("ccache")
 		set(CMAKE_CXX_COMPILER_LAUNCHER ${CCACHE})
-		else()
+	else()
 		log_option_disabled("ccache")
 	endif()
 endif()
-
 
 # === SCCACHE ===
 if(OPTIONS_ENABLE_SCCACHE)
@@ -70,12 +69,9 @@ if(OPTIONS_ENABLE_SCCACHE)
   endif()
 endif()
 
-
 # === IPO ===
-option(OPTIONS_ENABLE_IPO "Check and Enable interprocedural optimization (IPO/LTO)" ON)
 if(OPTIONS_ENABLE_IPO)
 	log_option_enabled("ipo")
-
 	include(CheckIPOSupported)
 	check_ipo_supported(RESULT result OUTPUT output)
 	if(result)
@@ -87,6 +83,17 @@ else()
 	log_option_disabled("ipo")
 endif()
 
+# *****************************************************************************
+# Set build type to Release by default
+# *****************************************************************************
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build." FORCE)
+endif()
+
+# *****************************************************************************
+# Add definition for WITH_ENCRYPTION
+# *****************************************************************************
+add_definitions(-DWITH_ENCRYPTION)
 
 # *****************************************************************************
 # Add project
