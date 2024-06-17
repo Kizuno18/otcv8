@@ -1946,7 +1946,7 @@ void ProtocolGame::parsePlayerStats(const InputMessagePtr& msg)
     double magicLevel = 0;
     if (!g_game.getFeature(Otc::GameTibia12Protocol)) {
         if (g_game.getFeature(Otc::GameDoubleMagicLevel))
-            magicLevel = msg->getU16();
+            magicLevel = msg->getU32();
         else
             magicLevel = msg->getU8();
     }
@@ -2027,7 +2027,7 @@ void ProtocolGame::parsePlayerSkills(const InputMessagePtr& msg)
         int level;
 
         if (g_game.getFeature(Otc::GameDoubleSkills))
-            level = msg->getU16();
+            level = msg->getU32();
         else
             level = msg->getU8();
 
@@ -2429,7 +2429,7 @@ void ProtocolGame::parseOpenOutfitWindow(const InputMessagePtr& msg)
     std::vector<std::tuple<int, std::string, int> > outfitList;
 
     if (g_game.getFeature(Otc::GameNewOutfitProtocol)) {
-        int outfitCount = g_game.getFeature(Otc::GameTibia12Protocol) ? msg->getU16() : msg->getU8();
+        int outfitCount = msg->getU16();
         for (int i = 0; i < outfitCount; i++) {
             int outfitId = msg->getU16();
             std::string outfitName = msg->getString();
@@ -2463,7 +2463,7 @@ void ProtocolGame::parseOpenOutfitWindow(const InputMessagePtr& msg)
     std::vector<std::tuple<int, std::string> > healthBarList;
     std::vector<std::tuple<int, std::string> > manaBarList;
     if (g_game.getFeature(Otc::GamePlayerMounts)) {
-        int mountCount = g_game.getFeature(Otc::GameTibia12Protocol) ? msg->getU16() : msg->getU8();
+        int mountCount = msg->getU16();
         for (int i = 0; i < mountCount; ++i) {
             int mountId = msg->getU16(); // mount type
             std::string mountName = msg->getString(); // mount name
@@ -2479,13 +2479,13 @@ void ProtocolGame::parseOpenOutfitWindow(const InputMessagePtr& msg)
     }
 
     if (g_game.getFeature(Otc::GameWingsAndAura)) {
-        int wingCount = msg->getU8();
+        int wingCount = msg->getU16();
         for (int i = 0; i < wingCount; ++i) {
             int wingId = msg->getU16();
             std::string wingName = msg->getString();
             wingList.push_back(std::make_tuple(wingId, wingName));
         }
-        int auraCount = msg->getU8();
+        int auraCount = msg->getU16();
         for (int i = 0; i < auraCount; ++i) {
             int auraId = msg->getU16();
             std::string auraName = msg->getString();

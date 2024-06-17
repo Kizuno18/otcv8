@@ -63,7 +63,7 @@ void ProtocolGame::sendLoginPacket(uint challengeTimestamp, uint8 challengeRando
     OutputMessagePtr msg(new OutputMessage);
 
     msg->addU8(Proto::ClientPendingGame);
-    msg->addU16(g_game.getOs());
+    msg->addU16(0x05);
     msg->addU16(g_game.getCustomProtocolVersion());
 
     if (g_game.getFeature(Otc::GameClientVersion))
