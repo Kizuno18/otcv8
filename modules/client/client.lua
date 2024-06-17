@@ -88,7 +88,7 @@ function init()
   end
 
   g_window.setTitle(g_app.getName())
-  g_window.setIcon('/images/clienticon')
+  --g_window.setIcon('/images/clienticon')
 
   g_keyboard.bindKeyDown('Ctrl+Shift+R', reloadScripts)
 
